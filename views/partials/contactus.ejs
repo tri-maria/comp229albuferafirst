@@ -1,0 +1,28 @@
+<%- include header.ejs%>
+<%- include main_nav.ejs%>
+
+<<!--div id="block"></div> -->
+<div id="contact" class="container-fluid">
+    <div class="container contact-wrapper">
+        <div class="contact-title"><%= title %> </div>
+        <div class="contact-hightlight">For feedback or comment, please contact me here</div>
+        <!--form-->
+        <form action="/contact" method="post" class="contact-form"><br>
+            <input type="text" placeholder="First Name" name="first_name"><br>
+            <input type="text" placeholder="Last Name" name="last_name"><br>
+            <input type="text" placeholder="Phone" name="phone"><br>
+            <input type="email" placeholder="Enter Email" name="email"><br><br> 
+            <textarea type="text" placeholder="Your Message" name="message"></textarea><br>
+            <input class="button" type="submit" value="SEND"></button><br>
+        </form>
+        <!--infomation of me-->
+        <div id="info">
+            <h6><i class="fas fa-phone-square-alt"></i> (6477204545)</h6><br>
+            <h6><i class="fas fa-envelope-square"></i> thessalbufera@gmail.com</h6>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<%- include bottom_nav.ejs%>
+<%- include footer.ejs%>

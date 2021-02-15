@@ -1,0 +1,66 @@
+<!--Main Navigation-->
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#" class ="pull-left"><img src="/assets/images/logo3.png" alt ="logo" width="100" height="80"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+       
+        <% if (title=="Home") { %>
+          <li class="nav-item active">
+            <% } else { %> 
+              <li class="nav-item">
+            <% } %>
+        <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home</a> 
+          </li>
+        
+          <% if (title=="About Me") { %>
+            <li class="nav-item active">
+              <% } else { %> 
+                <li class="nav-item">
+              <% } %>
+          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i>About</a> 
+        </li>
+
+        
+        <% if (title=="Projects") { %>
+          <li class="nav-item active">
+            <% } else { %> 
+              <li class="nav-item">
+            <% } %>
+        <a class="nav-link" href="/project"><i class="fas fa-info-circle"></i>Projects</a> 
+      </li>
+
+
+
+        <% if (title=="Services") { %>
+          <li class="nav-item active">
+            <% } else { %> 
+              <li class="nav-item">
+            <% } %>
+          <a class="nav-link" href="/services"><i class="fas fa-cogs"></i>Services</a> 
+        </li>
+
+        <% if (title=="Contact") { %>
+          <li class="nav-item active">
+            <% } else { %> 
+              <li class="nav-item">
+            <% } %>
+          <a class="nav-link" href="/contactus"><i class="fad fa-mobile"></i> Contact</a> 
+        </li>
+       
+    </div>
+  </nav>
+
+  <!--Main Content-->
+  <main class ="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to the  <%= title %> page</h1>
+      
+    </div>
+    <body>
+  </body>
+  </main>
