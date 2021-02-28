@@ -1,0 +1,50 @@
+<%- include ../partials/header %>
+
+    <!--Main Navigation-->
+    <%- include ../partials/main_nav %>
+        <!--Main Content-->
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <!--offset from the left 3, 6 at the middle at the screen-->
+                    <br>
+                    <h1>
+                        <%= title%>
+                    </h1>
+                    <br>
+                    <form class="form" method="POST" action="/business-contact/edit/<%= businessContact._id %>">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="nameTextField" placeholder="Enter contact name"
+                                name="name" required value=" <%= businessContact.name %>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="number">Number</label>
+                            <input type="text" class="form-control" id="authorTextField"
+                                placeholder="Enter contact number" name="number" required
+                                value=" <%= businessContact.number %>">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="publishedTextField"
+                                placeholder="Enter contact email address" name="email" required
+                                value=" <%= businessContact.email %>">
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" type="submit">
+                            <i class="fas fa-save"></i>
+                            </i>Save</button>
+                        <a href="/business-contact/delete/<%= businessContact._id%>"
+                            class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i> Delete</a>
+                        <a href="/business-contact" class="btn btn-white">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Script Section-->
+        <%- include ../partials/footer %>

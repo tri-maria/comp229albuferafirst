@@ -1,0 +1,44 @@
+<%- include ../partials/header %>
+
+    <!--Main Navigation-->
+    <%- include ../partials/main_nav %>
+        <!--Main Content-->
+
+        <div class="container">
+            <div class="row">
+                <div class="offset-md-3 col-md-6">
+                    <!--offset from the left 3, 6 at the middle at the screen-->
+                    <br>
+                    <h1>
+                        <%= title%>
+                    </h1>
+                    <br>
+                    <form class="form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="nameTextField" placeholder="Enter contact name"
+                                name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="number">Number</label>
+                            <input type="text" class="form-control" id="authorTextField"
+                                placeholder="Enter contact number" name="number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="publishedTextField"
+                                placeholder="Enter contact email address" name="email" required>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary" type="submit">
+                            </i>Add </button>
+                        <a href="/business-contact" class="btn btn-danger">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--Script Section-->
+        <%- include ../partials/footer %>

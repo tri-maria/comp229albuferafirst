@@ -1,0 +1,61 @@
+<%- include ../partials/header %>
+
+    <!--Main Navigation-->
+    <%- include ../partials/main_nav %>
+        <!--Main Content-->
+
+        <main class="container">
+            <div class="row">
+                <div class="offset-md-1 col-md-11">
+                    <!--straight column-->
+                    <br>
+                    <h1>
+                        <%=title%>
+                    </h1>
+                    <br>
+                    <a href="/business-contact/add" class="btn btn-primary" role="button">
+                        <i class="fas fa-plus-circle"></i> Add Business Contact</a>
+                    <br>
+                    <br>
+                    <table class="table table-bordered table-striped table-hover">
+                        <!--Header Row-->
+                        <tr class="d-flex">
+                            <th class="text-center col-3">Name</th>
+                            <th class="text-center col-2">Contact Number</th>
+                            <th class="text-center col-3">Email</th>
+                            <th class="text-center col-2"></th>
+                            <th class="text-center col-2"></th>
+                        </tr>
+                        <!--Repeatable Template Row-->
+                        <% for(let count=0; count<businessContacts.length; count++){ %>
+                            <tr class="d-flex">
+                                <td class="text-center col-3">
+                                    <%=businessContacts[count].name %>
+                                </td>
+                                <td class="text-center col-2">
+                                    <%=businessContacts[count].number %>
+                                </td>
+                                <td class="text-center col-3">
+                                    <%=businessContacts[count].email %>
+                                </td>
+                                <td class="text-center col-2">
+                                    <a href="/business-contact/edit/<%=businessContacts[count]._id%>"
+                                        class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i> Edit</a>
+                                </td>
+
+                                <td class="text-center col-2">
+                                    <a href="/business-contact/delete/<%=businessContacts[count]._id%>"
+                                        class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Delete</a>
+
+                                </td>
+                            </tr>
+                            <% } %>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <!--Script Section-->
+        <%- include ../partials/footer %>
